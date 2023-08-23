@@ -192,25 +192,25 @@ def gen_user(choice):
             pass
     return username
 
-@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.تشيكر"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.Checker"))
 async def _(event):
     if ispay2[0] == "yes":
         await event.edit(tele_checker)
         
-@Xx3bFD.on(events.NewMessage(outgoing=True, pattern=r"\.اليوزرات المبندة"))
+@Xx3bFD.on(events.NewMessage(outgoing=True, pattern=r"\.users is band"))
 async def _(event):
     if ispay2[0] == "yes":
         await fifthon.send_file(event.chat_id, 'banned.txt')
 
 
-@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.الانواع"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.Types"))
 async def _(event):
     if ispay2[0] == "yes":
         await event.edit(tele_checker2)
-# صيد عدد نوع قناة
+# Hunting the number of channel type
 
 
-@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.صيد (.*)"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.Hunting"))
 async def _(event):
     if ispay2[0] == "yes":
         isclaim.clear()
@@ -219,15 +219,15 @@ async def _(event):
         ch = str(msg[2])
         choice = str(msg[1])
         trys = 0
-        await event.edit(f"حسناً سأفحص نوع `{choice}` من اليوزرات على `{ch}` , بعدد `{msg[0]}` من المحاولات !")
+        await event.edit(f"Ok I will check a type`{choice}` من اليوزرات على `{ch}` , بعدد `{msg[0]}` من المحاولات !")
 
         @Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.حالة الصيد"))
         async def _(event):
             if ispay2[0] == "yes":
                 if "on" in isclaim:
-                    await event.edit(f"الصيد وصل لـ({trys}) من المحاولات")
+                    await event.edit(f"الصيد وصل لعدد {types} من المحاولات)
                 elif "off" in isclaim:
-                    await event.edit("لايوجد صيد شغال !")
+                    await event.edit("There is no working hunting!")
                 else:
                     await event.edit("خطأ")
             else:
