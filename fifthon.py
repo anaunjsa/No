@@ -45,7 +45,7 @@ time_bio = ["off"]
 
 async def join_channel():
     try:
-        await fifthon(JoinChannelRequest("@fifthon"))
+        await Xx3bD(JoinChannelRequest("@Xx3bD"))
     except BaseException:
         pass
 
@@ -93,59 +93,59 @@ async def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=Fal
             pass
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.الاوامر"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.الاوامر"))
 async def _(event):
     await event.edit(commands)
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit("جارٍ...")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(f'''
-**☆ Welcome to Source fifthon
+**☆ Welcome to Source Xx3bD
 ☆ Version : 1.3
 ☆ Ping : `{ms}`
 ☆ Date : `{m9zpi}`
 ☆ ID : `{event.sender_id}`
-☆ Source fifthon : @i_v_0**
+☆ Source Xx3bD : @eeuwr**
 ''')
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.م1"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.م1"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec1)
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.م2"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.م2"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec2)
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.م3"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.م3"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec3)
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.م4"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.م4"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec4)
 
     
 ownerhson_id = 1041483862
-@fifthon.on(events.NewMessage(outgoing=False, pattern='/start'))
+@Xx3bD.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply('اهلا مطوري حلم @iziii')
+        order = await event.reply('اهلا مطوري عبود @eeuwr')
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
 async def update(event):
     await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
     await fifthon.disconnect()
