@@ -122,7 +122,7 @@ async def _(event):
 الامر:  `.حالة التثبيت`
 • لمعرفة عدد المحاولات للصيد
 
-@w_f_u  - channle userbot 
+@Xx3bD
 
 """
     )
@@ -142,7 +142,7 @@ async def hunterusername(event):
             ch = await sbb_b(
                 functions.channels.CreateChannelRequest(
                     title="Error HUNTER - صيد Error",
-                    about="This channel to hunt username by - @w_f_u ",
+                    about="This channel to hunt username by - @eeuwr - @Xx3bD ",
                 )
             )
             ch = ch.updates[1].channel_id
@@ -168,7 +168,7 @@ async def hunterusername(event):
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"- Done : @{username} !\n- By : @ErrorDeve - @w_f_u !\n- Hunting Log {trys2[0]}",
+                    f"- Done : @{username} !\n- By : @eeuwr - @Xx3bD !\n- Hunting Log {trys2[0]}",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -212,7 +212,7 @@ async def _(event):
             ch = await sbb_b(
                 functions.channels.CreateChannelRequest(
                     title="Error HUNTER - صيد Error",
-                    about="This channel to hunt username by - @ErrorDeve ",
+                    about="This channel to hunt username by - @Xx3bD - @eeuwr ",
                 )
             )
             ch = ch.updates[1].channel_id
@@ -236,7 +236,7 @@ async def _(event):
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"- Done : @{username} !\n- By : @ErrorDeve - @w_f_u !\n- Hunting Log {trys2[0]}",
+                    f"- Done : @{username} !\n- By : @eeuwr - @Xx3bD !\n- Hunting Log {trys2[0]}",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
