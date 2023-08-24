@@ -6,7 +6,7 @@ import telethon
 from telethon.sync import functions
 from user_agent import generate_user_agent
 
-from sbb_b import sbb_b
+from eeuwr import eeuwr
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
@@ -39,26 +39,26 @@ def check_user(username):
 
 
 def gen_user(choice):
-    if choice == "سداسي حرفين":
+If choice == "6 Two Letters":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], d[0], c[0], c[0], c[0], d[0]]
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "ثلاثيات":
+    elif choice == "Triple":  
         c = random.choices(a)
         d = random.choices(b)
         s = random.choices(e)
         f = [c[0], "_", d[0], "_", s[0]]
         username = "".join(f)
-    elif choice == "سداسيات":
+    elif choice == "Hexagonals":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
         random.shuffle(f)
         username = "".join(f)
-    elif choice == "بوتات":
+    elif choice == "Bots":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
@@ -67,7 +67,7 @@ def gen_user(choice):
         username = "".join(f)
         username = username + "bot"
 
-    elif choice == "خماسي حرفين":
+    elif choice == "five Two letter":
         c = random.choices(a)
         d = random.choices(e)
 
@@ -75,20 +75,20 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "خماسي":
+    elif choice == "Five":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], c[0], c[0], c[0], d[0]]
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "سباعيات":
+    elif choice == "Sevens":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], c[0], c[0], c[0], d[0], c[0], c[0]]
         random.shuffle(f)
         username = "".join(f)
-    elif choice == "تيست":
+    elif choice == "Test":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], d[0], c[0], d[0], d[0], c[0], c[0], d[0], c[0], d[0]]
@@ -99,28 +99,28 @@ def gen_user(choice):
     return username
 
 
-@sbb_b.ar_cmd(pattern="الصيد")
+@Xx3bD.ar_cmd(pattern="Hunting")
 async def _(event):
     await event.edit(
         """
-أوامر الصيد الخاصة بسورس تيبثون : 
+Xx3bD Source Hunting Orders:
 
 ٴ— — — — — — — — — —
 
-النوع :(  سداسي حرفين/ ثلاثيات/ سداسيات/ بوتات/ خماسي حرفين/خماسي /سباعيات )
+Type :( 6 two letter / triples / hexagonal / bots / five two letter / five / sevens)
 
-الامر:  `.صيد` + النوع
-- يقوم بصيد معرفات عشوائية حسب النوع
+The command: `. Hunting` + Type
+- Hunts random users by type
 
-الامر:  `تثبيت` + معرف
-* وظيفة الامر : يقوم بالتثبيت على المعرف عندما يصبح متاح يأخذه
+Command: `install` + username
+* command function: installs on the identifier when it becomes available takes it
 
 ٴ— — — — — — — — — —
-الامر:   `.حالة الصيد`
-• لمعرفة عدد المحاولات للصيد
+The command: `. Fishing status`
+• To know the number of attempts to hunt
 
-الامر:  `.حالة التثبيت`
-• لمعرفة عدد المحاولات للصيد
+The command: `. Status of installation`
+• To know the number of attempts to install
 
 @Xx3bD
 
@@ -128,7 +128,7 @@ async def _(event):
     )
 
 
-@sbb_b.ar_cmd(pattern="صيد (.*)")
+@Xx3bD.ar_cmd(pattern="Hunting (.*)")
 async def hunterusername(event):
     msg = event.text.split()
     choice = str(msg[1])
@@ -136,20 +136,20 @@ async def hunterusername(event):
         ch = str(msg[2])
         if "@" in ch:
             ch = ch.replace("@", "")
-        await event.edit(f"حسناً سيتم بدء الصيد في @{ch} .")
+        await event.edit(f"Well the fishing will start in @{ch} .")
     except:
         try:
             ch = await sbb_b(
                 functions.channels.CreateChannelRequest(
-                    title="Error HUNTER - صيد Error",
+                    title="Error HUNTER - Hunting Error",
                     about="This channel to hunt username by - @eeuwr - @Xx3bD ",
                 )
             )
             ch = ch.updates[1].channel_id
-            await event.edit(f"**- تم تفعيل الصيد بنجاح الان**")
+            await event.edit(f"**- Hunting has now been activated successfully**")
         except Exception as e:
             await sbb_b.send_message(
-                event.chat_id, f"خطأ في انشاء القناة , الخطأ**-  : {str(e)}**"
+                event.chat_id, f"Error creating channel , error*-  : {str(e)}**"
             )
     isclaim.clear()
     isclaim.append("on")
@@ -201,7 +201,7 @@ async def hunterusername(event):
     await event.client.send_message(event.chat_id, "**- تم بنجاح الانتهاء من الصيد**")
 
 
-@sbb_b.ar_cmd(pattern="تثبيت (.*)")
+@Xx3bD.ar_cmd(pattern="تثبيت (.*)")
 async def _(event):
     msg = event.text.split()
     try:
@@ -265,7 +265,7 @@ async def _(event):
     await sbb_b.send_message(event.chat_id, "**- تم الانتهاء من التثبيت بنجاح**")
 
 
-@sbb_b.ar_cmd(pattern="حالة الصيد")
+@Xx3bD.ar_cmd(pattern="hunting condition")
 async def _(event):
     if "on" in isclaim:
         await event.edit(f"**- الصيد وصل لـ({trys[0]}) **من المحاولات")
@@ -275,7 +275,7 @@ async def _(event):
         await event.edit("- لقد حدث خطأ ما وتوقف الامر لديك")
 
 
-@sbb_b.ar_cmd(pattern="حالة التثبيت")
+@Xx3bD.ar_cmd(pattern="installation status")
 async def _(event):
     if "on" in isauto:
         await event.edit(f"**- التثبيت وصل لـ({trys2[0]}) من المحاولات**")
