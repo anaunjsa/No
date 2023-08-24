@@ -50,7 +50,7 @@ async def join_channel():
         pass
 
 
-@fifthon.on(events.NewMessage(outgoing=True, pattern=r"هممم"))
+@Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"هممم"))
 async def _(event):
     if not event.is_reply:
         return await event.edit(
@@ -148,9 +148,9 @@ async def OwnerStart(event):
 @Xx3bD.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
 async def update(event):
     await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
-    await fifthon.disconnect()
-    await fifthon.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
+    await Xx3bD.disconnect()
+    await Xx3bD.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
 
 
-print("- fifthon Userbot Running ..")
+print("- Xx3bD Userbot Running ..")
 fifthon.run_until_disconnected()
