@@ -225,7 +225,7 @@ async def _(event):
         async def _(event):
             if ispay2[0] == "yes":
                 if "on" in isclaim:
-                    await event.edit(f"الصيد وصل لعدد {types} من المحاولات)
+                    await event.edit(f"الصيد وصل لعدد {trys[0]} من المحاولات)
                 elif "off" in isclaim:
                     await event.edit("There is no working hunting!")
                 else:
